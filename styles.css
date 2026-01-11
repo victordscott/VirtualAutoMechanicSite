@@ -444,6 +444,33 @@ footer {
     display: block;
 }
 
+/* QR Code Section */
+.qr-code-container {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+}
+
+.qr-code-title {
+    font-size: 1.5rem;
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+#qrcode {
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#qrcode canvas {
+    display: block;
+    margin: 0 auto;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     nav {

@@ -34,12 +34,35 @@
                 <img src="Images/Logo2.jpg" alt="VirtualAutoMechanic Logo 2">
             </div>
         </div>
+        <div class="qr-code-container">
+            <h3 class="qr-code-title">Scan to Visit Our Website</h3>
+            <div id="qrcode"></div>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 VirtualAutoMechanic. All rights reserved.</p>
     </footer>
+
+    <!-- QR Code Library -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+    <script>
+        // Generate QR Code after page loads
+        window.addEventListener('DOMContentLoaded', function() {
+            const qrElement = document.getElementById('qrcode');
+            if (qrElement && typeof QRCode !== 'undefined') {
+                new QRCode(qrElement, {
+                    text: 'https://victordscott.github.io/VirtualAutoMechanicSite/index.html',
+                    width: 250,
+                    height: 250,
+                    colorDark: '#000000',
+                    colorLight: '#FFFFFF',
+                    correctLevel: QRCode.CorrectLevel.H
+                });
+            }
+        });
+    </script>
 </body>
 </html>
 
