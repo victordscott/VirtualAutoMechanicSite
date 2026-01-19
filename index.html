@@ -14,6 +14,11 @@
             <div class="logo">
                 <img src="Images/Logo.jpg" alt="VirtualAutoMechanic Logo">
             </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="featured-mechanic.html">Featured Mechanic</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -21,11 +26,144 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Coming Soon - Virtual Auto Mechanic Service</h1>
+                <h1>Virtual Auto Mechanic Service</h1>
                 <p>Expert virtual vehicle inspection and DIY auto repair consultation services. Save time and money with our professional guidance.</p>
+                <h1>Nationwide</h1>
+                <p>We service the United States and Canada<br/>
+                Phone: <a href="tel:+14703030902" style="color: var(--white); text-decoration: none;">(470) 303-0902</a></p>
+            </div>
+            <div class="hero-image-rotator">
+                <div class="image-rotator-container">
+                    <img id="rotator-image" src="Images/HomePage/CarMechanic10.jpg" alt="Car Mechanic Service">
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Our Goal Section -->
+    <section class="our-goal">
+        <h2 class="section-title">Our Goal</h2>
+        <div class="our-goal-content">
+            <p>Diagnosing and repairing vehicle problems can be time consuming and expensive. We offer a set of virtual services that will save time and money. We specialize in virtual inspection and helping do-it-yourselfers who want to make their own repairs, save money or get a sanity check before getting repairs done at a shop or dealership.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Virtual Vehicle Inspection</h3>
+                <p>Pre and post purchase inspections. Comprehensive inspections using online meetings, photos and videos.</p>
+            </div>
+            <div class="service-item">
+                <h3>Basic Diagnostics</h3>
+                <p>Expert diagnostic services to identify and resolve vehicle issues efficiently including starter, alternator, battery and more.</p>
+            </div> 
+            <div class="service-item">
+                <h3>DIY Auto Repair Help</h3>
+                <p>Consult an expert for do-it-yourself auto repairs including replacing brake pads, rotors, struts, control arms, sway bar link, valve cover gaskets and more. </p>
+            </div>
+            <div class="service-item">
+                <h3>General Consultation</h3>
+                <p>Help with decisions on what to do with your vehicle. Is it worth repairing, should you sell it, etc.?</p>
+            </div>
+            <div class="service-item">
+                <h3>Sanity Checks</h3>
+                <p>Get a sanity check to prevent major mistakes before getting repairs done at a shop or dealership.</p>
+            </div>
+            <div class="service-item">
+                <h3>Tool and Part Purchase Advice</h3>
+                <p>We let you know what tools and parts you need to get the job done.</p>
+            </div>            
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section class="pricing">
+        <h2 class="section-title">Consultation Pricing</h2>
+        <div class="pricing-grid">
+            <div class="pricing-item">
+                <h3>15 Minutes</h3>
+                <div class="price">$30</div>
+            </div>
+            <div class="pricing-item">
+                <h3>30 Minutes</h3>
+                <div class="price">$60</div>
+            </div>
+            <div class="pricing-item">
+                <h3>45 Minutes</h3>
+                <div class="price">$90</div>
+            </div>
+            <div class="pricing-item">
+                <h3>1 Hour</h3>
+                <div class="price">$120</div>
+            </div>
+        </div>
+        <div id="contact"></div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact">
+        <h2 class="section-title">Set Up Your Appointment</h2>
+        <div class="contact-info">
+            <p><strong>Call to set up your appointment. We service the United States and Canada</strong></p>
+            <p>Phone: <a href="tel:+14703030902" style="color: var(--white); text-decoration: none;">(470) 303-0902</a></p>
+        </div>
+    </section>
+
+    <!-- Featured Mechanic Section -->
+    <section class="featured-mechanic">
+        <h2 class="section-title">Featured Mechanic</h2>
+        <div class="featured-mechanic-content">
+            <div class="featured-mechanic-image">
+                <a href="featured-mechanic.html">
+                    <img src="Images/FeaturedMechanic/Featured2.jpg" alt="Chev Charlemagne">
+                </a>
+            </div>
+            <div class="featured-mechanic-info">
+                <h3><a href="featured-mechanic.html">Chev Charlemagne</a></h3>
+                <p>Chev Charlemagne is the owner of Genuine Automotive Mobile Mechanic. He is a trusted 5 star mobile mechanic operating in North Georgia. His reviews speak for themselves.</p>
+                <a href="featured-mechanic.html" class="cta-button">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VirtualAutoMechanic. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Image Rotator Script
+        const images = [
+            'Images/HomePage/CarMechanic10.jpg',
+            'Images/HomePage/CarMechanic1.jpg',
+            'Images/HomePage/CarMechanic2.jpg',
+            'Images/HomePage/CarMechanic6.jpg',
+            'Images/HomePage/CarMechanic7.jpg',
+            'Images/HomePage/CarMechanic8.jpg',
+            'Images/HomePage/CarMechanic9.jpg',
+            'Images/HomePage/CarMechanic11.jpg',
+            'Images/HomePage/CarMechanic12.jpg',
+        ];
+
+        let currentIndex = 0;
+        const rotatorImage = document.getElementById('rotator-image');
+
+        function rotateImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            rotatorImage.style.opacity = '0';
+            
+            setTimeout(() => {
+                rotatorImage.src = images[currentIndex];
+                rotatorImage.style.opacity = '1';
+            }, 300);
+        }
+
+        // Rotate image every 4 seconds
+        setInterval(rotateImage, 4000);
+    </script>
 </body>
 </html>
 
