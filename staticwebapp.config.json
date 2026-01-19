@@ -1,8 +1,7 @@
 {
     "routes": [
         {
-            "route": "/index.html",
-            "rewrite": "/coming-soon.html"
+            "route": "/index.html"
         }
     ]
 }
