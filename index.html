@@ -150,13 +150,14 @@
 
         let currentIndex = 0;
         const rotatorImage = document.getElementById('rotator-image');
+        const cacheBust = '?v=1.0.0'; // change this to a new version number when you make changes to the images
 
         function rotateImage() {
             currentIndex = (currentIndex + 1) % images.length;
             rotatorImage.style.opacity = '0';
             
             setTimeout(() => {
-                rotatorImage.src = images[currentIndex];
+                rotatorImage.src = images[currentIndex] + cacheBust;
                 rotatorImage.style.opacity = '1';
             }, 300);
         }
